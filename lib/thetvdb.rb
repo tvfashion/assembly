@@ -3,9 +3,8 @@ class Thetvdb
   include HTTParty
   base_uri 'http://thetvdb.com/api'
 
-
-  def api_key
-    ENV['TVFASHION_TVDB_API']
+  def initialize
+    @api_key = ENV['TVFASHION_TVDB_API']
   end
 
   def search_show(show_name)
